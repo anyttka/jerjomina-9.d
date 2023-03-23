@@ -1,0 +1,27 @@
+
+-- create
+CREATE TABLE EMPLOYEE (
+  Id INTEGER PRIMARY KEY,
+  karjera_v TEXT NOT NULL,
+  karjera_u TEXT NOT NULL,
+  rajons TEXT NOT NULL,
+  vecums INTEGER NOT NULL,
+  Dzimums TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO EMPLOYEE VALUES (1, 'Alla', 'Kotova', 'Riga', 32, 'sieviete');
+INSERT INTO EMPLOYEE VALUES (2, 'Vlads', 'Krastiņš', 'Riga', 45, 'virietis');
+INSERT INTO EMPLOYEE VALUES (3, 'Grigorijs', 'Galds', 'Ogres rajons', 33, 'virietis');
+INSERT INTO EMPLOYEE VALUES (4, 'Kira', 'Klimova', 'Saulkrastu novads', 56, 'sieviete');
+
+-- fetch 
+SELECT * FROM EMPLOYEE;
+
+SELECT * FROM EMPLOYEE where vecums>45;
+SELECT * FROM EMPLOYEE where rajons='Riga' and dzimums='sieviete';
+
+SELECT avg(vecums)
+FROM EMPLOYEE;
+SELECT MIN(vecums)
+FROM EMPLOYEE;
